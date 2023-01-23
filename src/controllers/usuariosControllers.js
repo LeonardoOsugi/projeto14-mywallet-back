@@ -8,6 +8,7 @@ export async function postLogin(req, res){
     try{
         const usuarioExiste = await collectionUsuarios.findOne({email});
 
+        
         if(usuarioExiste && bcrypt.compareSync(password, usuarioExiste.password)){
             await collectionSessions.insertOne({
                 token,
@@ -25,6 +26,7 @@ export async function postLogin(req, res){
 };
 
 export async function postCadastro(req, res){
+    console.log("buivbsb");
     const {name, email, password} = req.body;
 
     try{

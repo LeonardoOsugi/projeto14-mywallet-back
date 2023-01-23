@@ -1,6 +1,7 @@
 import { userSchema } from "../models/schemas.js";
 
 export function userSchemaValidation(req, res, next){
+    console.log("leo")
     const {name, email, password, confirmPassword} = req.body;
     const {error} = userSchema.validate({name, email, password, confirmPassword}, {abortEarly: false});
 

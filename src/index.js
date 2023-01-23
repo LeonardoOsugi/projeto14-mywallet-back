@@ -6,6 +6,7 @@ dotenv.config();
 import usuariosRouters from "./routes/usuariosRoutes.js";
 import moneyRouters from "./routes/moneyRoutes.js";
 
+console.log("xablau");
 const app = express();
 app.use(express.json());
 app.use(cors());

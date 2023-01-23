@@ -14,7 +14,7 @@ export async function getMenu(req, res){
         delete user.password;
         delete user.confirmPassword;
         delete user.email;
-        res.send({lista});
+        res.send(lista);
     }catch(err){
         res.status(500).send(err);
     };
